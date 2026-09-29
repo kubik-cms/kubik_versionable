@@ -15,6 +15,8 @@ module Kubik
     end
 
     included do
+      include Kubik::AdminContentVersioning
+
       has_many :content_versions,
                class_name: "Kubik::ContentVersion",
                as: :versionable,
